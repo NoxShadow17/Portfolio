@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio — CS Engineer & AI Builder</title>
+    <meta name="description"
+        content="CS Engineering student building AI-powered products, ML systems, and viral web apps. Check out my projects and get in touch." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark-mode">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>aritra<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="terminal-toggle" class="btn-terminal" title="Toggle Terminal Mode">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line x1="12" y1="19" x2="20" y2="19"></line>
+                    </svg>
+                    <span>Terminal</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== TERMINAL MODE OVERLAY ===== -->
+    <div id="terminal-overlay" class="hidden">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="terminal-title">aritra@portfolio ~ bash</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line"><span class="prompt">$ </span><span class="typed-cmd" id="t-cmd-1"></span>
+                </div>
+                <div id="terminal-output"></div>
+                <div class="terminal-input-row">
+                    <span class="prompt">$ </span>
+                    <input type="text" id="terminal-input" placeholder="type a command..." autocomplete="off"
+                        spellcheck="false" />
+                </div>
+            </div>
+        </div>
+        <button id="terminal-close" class="btn-close-terminal">✕ Exit Terminal</button>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="grid-lines"></div>
+            <div class="glow-orb orb1"></div>
+            <div class="glow-orb orb2"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for Internships & Projects
+            </div>
+            <h1 class="hero-name">
+                <span class="name-line">Hey, I'm</span>
+                <span class="name-highlight" id="typed-name">Aritra Mandal</span>
+            </h1>
+            <h2 class="hero-tagline">
+                CS Engineer building <span class="gradient-text">AI-powered products</span> &amp; viral web apps
+            </h2>
+            <p class="hero-summary">
+                I'm a Computer Science student who obsesses over building things that matter —
+                from ML recommendation engines to sleek UIs that make people go <em>"wait, you built this?"</em>
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    View Projects
+                </a>
+                <a href="Resume.pdf" class="btn btn-secondary" target="_blank" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Resume
+                </a>
+                <a href="#contact" class="btn btn-ghost">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Contact Me
+                </a>
+            </div>
+            <div class="hero-scroll">
+                <span>Scroll to explore</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-card">
+                <div class="code-card-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="code-card-title">me.py</span>
+                </div>
+                <pre
+                    class="code-card-body"><code><span class="c-kw">class</span> <span class="c-fn">Engineer</span>:
+  name    = <span class="c-str">"Aritra"</span>
+  role    = <span class="c-str">"CS Student"</span>
+  loves   = [<span class="c-str">"AI/ML"</span>, <span class="c-str">"UI/UX"</span>,
+             <span class="c-str">"Systems"</span>]
+  building = <span class="c-str">"something cool"</span>
+
+  <span class="c-kw">def</span> <span class="c-fn">is_hireable</span>(self):
+    <span class="c-kw">return</span> <span class="c-val">True</span> <span class="c-comment"># always</span></code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ME ===== -->
+    <section id="about">
+        <div class="container">
+            <div class="section-label">01 / About Me</div>
+            <h2 class="section-title">Not your average <span class="gradient-text">CS student.</span></h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I got into CS because I wanted to <strong>build things that felt like magic</strong> to the
+                        people using them.
+                        That curiosity led me down a rabbit hole — from classic algorithms to training ML models,
+                        designing UI systems,
+                        and experimenting with AI-powered tools that actually solve real problems.
+                    </p>
+                    <p>
+                        I'm excited by the intersection of <strong>intelligence and interface</strong> — systems that
+                        think, adapt,
+                        and feel intuitive. Whether it's a recommendation engine that learns what you love, or a UI
+                        that's so clean
+                        it disappears into the experience, that's the kind of stuff I obsess over.
+                    </p>
+                    <p>
+                        Right now I'm focused on building <strong>AI-powered micro-products</strong>, sharpening my
+                        understanding
+                        of scalable architectural patterns, and contributing to things that push the boundaries of
+                        what's possible
+                        with modern tech.
+                    </p>
+                    <div class="about-tags">
+                        <span class="tag">🤖 AI/ML Systems</span>
+                        <span class="tag">🎨 UI/UX Engineering</span>
+                        <span class="tag">⚙️ Scalable Backends</span>
+                        <span class="tag">🧪 Experimental Tech</span>
+                        <span class="tag">🎬 Recommendation Engines</span>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-num">10+</div>
+                        <div class="stat-label">Projects Shipped</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">3+</div>
+                        <div class="stat-label">Hackathons</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">4+</div>
+                        <div class="stat-label">Languages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">∞</div>
+                        <div class="stat-label">Curiosity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-label">02 / Featured Projects</div>
+            <h2 class="section-title">Built with <span class="gradient-text">depth.</span></h2>
+            <p class="section-subtitle">5 projects I can talk about for hours. Each one taught me something real.</p>
+
+            <!-- ── FEATURED PROJECT 1: Neurodiverse Support System ── -->
+            <div class="featured-project fp-left">
+                <div class="fp-content">
+                    <div class="fp-meta">
+                        <span class="fp-number">01</span>
+                        <span class="project-type-tag ai">🧠 AI / ML</span>
+                        <span class="project-type-tag ux">🎨 UI / UX</span>
+                        <div class="fp-badge-flagship">🔥 Flagship</div>
+                    </div>
+                    <h3 class="fp-title">Neurodiverse Support System</h3>
+                    <p class="fp-desc">
+                        An adaptive task management and text simplification platform designed for users with ADHD and
+                        Dyslexia. The system adjusts reading complexity in real-time using NLP, breaks overwhelming
+                        tasks
+                        into micro-steps, and adapts its UI based on cognitive load cues.
+                    </p>
+                    <div class="fp-problem">
+                        <strong>Problem:</strong> Standard productivity tools overwhelm neurodiverse users with
+                        wall-of-text instructions and rigid task structures. There was no tool built for
+                        how <em>their</em> brains actually work.
+                    </div>
+                    <div class="fp-approach">
+                        <div class="approach-item">
+                            <span class="approach-label">ML Used</span>
+                            <span>NLP text simplification (Groq LLM) + rule-based readability scoring</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">UX Choice</span>
+                            <span>High-contrast mode, dyslexia-friendly fonts, reduced visual noise</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Key Outcome</span>
+                            <span>Task completion improved significantly in internal user tests</span>
+                        </div>
+                    </div>
+                    <div class="fp-stack">
+                        <span class="stack-tag">Python</span>
+                        <span class="stack-tag">Node.js</span>
+                        <span class="stack-tag">Groq API</span>
+                        <span class="stack-tag">React</span>
+                        <span class="stack-tag">NLP</span>
+                        <span class="stack-tag">Express</span>
+                    </div>
+                    <div class="fp-actions">
+                        <a href="https://github.com/NoxShadow17/Neurodiverse-Support-System" class="btn btn-secondary"
+                            target="_blank">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        <button class="btn-case-study" onclick="openCaseStudy('neuro')">📖 Case Study</button>
+                    </div>
+                </div>
+                <div class="fp-visual">
+                    <div class="fp-mockup fp-mockup-neuro">
+                        <div class="mock-window">
+                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span
+                                    class="dot green"></span></div>
+                            <div class="mock-body">
+                                <div class="mock-ui-label">Neurodiverse Support</div>
+                                <div class="mock-task">📋 Task: Write report<br /><small>Simplified into 4 micro-steps
+                                        ✓</small></div>
+                                <div class="mock-bar-progress">
+                                    <div class="mock-progress" style="width:65%"></div>
+                                </div>
+                                <div class="mock-text-badge">Reading Level: Grade 6 ✓</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── FEATURED PROJECT 2: Movie Recommender ── -->
+            <div class="featured-project fp-right">
+                <div class="fp-visual">
+                    <div class="fp-mockup fp-mockup-cinema">
+                        <div class="mock-window">
+                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span
+                                    class="dot green"></span></div>
+                            <div class="mock-body">
+                                <div class="mock-ui-label">CineMatch</div>
+                                <div class="mock-recs">
+                                    <div class="mock-rec-item">🎬 Parasite · 98% match</div>
+                                    <div class="mock-rec-item">🎬 Oldboy · 95% match</div>
+                                    <div class="mock-rec-item">🎬 Drive · 91% match</div>
+                                </div>
+                                <div class="mock-text-badge">Vibe Score: 🔥 High</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fp-content">
+                    <div class="fp-meta">
+                        <span class="fp-number">02</span>
+                        <span class="project-type-tag ai">🧠 AI / ML</span>
+                    </div>
+                    <h3 class="fp-title">CineMatch — ML Movie Recommender</h3>
+                    <p class="fp-desc">
+                        A hybrid recommendation engine combining SVD-based collaborative filtering with TF-IDF
+                        content-based similarity. Powered by the TMDB dataset, with YouTube sentiment analysis
+                        layered on top to generate a "Vibe Score" for each movie.
+                    </p>
+                    <div class="fp-problem">
+                        <strong>ML Breakdown:</strong> Cold-start users go through a genre quiz to seed a preference
+                        vector. Returning users get SVD-weighted collaborative recommendations. The system auto-selects
+                        which mode to weight based on interaction history depth.
+                    </div>
+                    <div class="fp-approach">
+                        <div class="approach-item">
+                            <span class="approach-label">Algorithm</span>
+                            <span>SVD matrix factorization + cosine similarity (hybrid)</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Data</span>
+                            <span>TMDB API → Pandas pipeline → Scikit-learn SVD</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Result</span>
+                            <span>3× higher CTR vs random baseline</span>
+                        </div>
+                    </div>
+                    <div class="fp-stack">
+                        <span class="stack-tag">Python</span>
+                        <span class="stack-tag">Scikit-learn</span>
+                        <span class="stack-tag">SVD</span>
+                        <span class="stack-tag">TMDB API</span>
+                        <span class="stack-tag">Pandas</span>
+                        <span class="stack-tag">React</span>
+                    </div>
+                    <div class="fp-actions">
+                        <a href="https://github.com/NoxShadow17/Movie-Recommendation-system" class="btn btn-secondary"
+                            target="_blank">GitHub</a>
+                        <button class="btn-case-study" onclick="openCaseStudy('cinematic')">📖 Case Study</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── FEATURED PROJECT 3: Phishing Detection ── -->
+            <div class="featured-project fp-left">
+                <div class="fp-content">
+                    <div class="fp-meta">
+                        <span class="fp-number">03</span>
+                        <span class="project-type-tag ai">🧠 AI / ML</span>
+                        <span class="project-type-tag sys">🛠 Full Stack</span>
+                    </div>
+                    <h3 class="fp-title">Phishing URL &amp; Email Detection</h3>
+                    <p class="fp-desc">
+                        A machine learning classifier that detects phishing URLs and malicious emails using feature
+                        extraction from URL structure, domain age, redirect patterns, and email header analysis.
+                        Trained on a labelled dataset of 100K+ samples.
+                    </p>
+                    <div class="fp-problem">
+                        <strong>Problem:</strong> Phishing attacks are one of the top vectors for data breaches.
+                        Rule-based blocklists can't keep up. ML-based pattern recognition can generalise to new threats.
+                    </div>
+                    <div class="fp-approach">
+                        <div class="approach-item">
+                            <span class="approach-label">Model</span>
+                            <span>Random Forest + XGBoost ensemble classifier</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Features</span>
+                            <span>URL length, special chars, domain entropy, TLD analysis, email headers</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Accuracy</span>
+                            <span>~97.3% on test set with &lt;2% false positive rate</span>
+                        </div>
+                    </div>
+                    <div class="fp-stack">
+                        <span class="stack-tag">Python</span>
+                        <span class="stack-tag">Scikit-learn</span>
+                        <span class="stack-tag">XGBoost</span>
+                        <span class="stack-tag">Pandas</span>
+                        <span class="stack-tag">Flask</span>
+                        <span class="stack-tag">React</span>
+                    </div>
+                    <div class="fp-actions">
+                        <a href="https://github.com/NoxShadow17/Phishing-URL-and-Email-detection-using-Machine-Learning"
+                            class="btn btn-secondary" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="fp-visual">
+                    <div class="fp-mockup">
+                        <div class="mock-window">
+                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span
+                                    class="dot green"></span></div>
+                            <div class="mock-body">
+                                <div class="mock-ui-label">Phishing Detector</div>
+                                <div class="mock-task" style="color:var(--red)">⚠️ URL:
+                                    suspicious-bank-login.xyz<br /><small>Phishing detected! Confidence: 97%</small>
+                                </div>
+                                <div class="mock-task" style="color:var(--green)">✅ URL:
+                                    github.com/NoxShadow17<br /><small>Safe — Confidence: 99.8%</small></div>
+                                <div class="mock-text-badge">Model: XGBoost · F1: 0.973</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── FEATURED PROJECT 4: Hand Detection ── -->
+            <div class="featured-project fp-right">
+                <div class="fp-visual">
+                    <div class="fp-mockup fp-mockup-cv">
+                        <div class="mock-window">
+                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span
+                                    class="dot green"></span></div>
+                            <div class="mock-body">
+                                <div class="mock-ui-label">Hand Detection · CV</div>
+                                <div class="mock-cv-view">
+                                    <div class="mock-cv-hand">✋</div>
+                                    <div class="mock-cv-dots">
+                                        <span class="cv-dot" style="top:20%;left:50%"></span>
+                                        <span class="cv-dot" style="top:35%;left:42%"></span>
+                                        <span class="cv-dot" style="top:35%;left:58%"></span>
+                                        <span class="cv-dot" style="top:55%;left:38%"></span>
+                                        <span class="cv-dot" style="top:55%;left:62%"></span>
+                                    </div>
+                                </div>
+                                <div class="mock-text-badge">21 Landmarks · 30fps ✓</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fp-content">
+                    <div class="fp-meta">
+                        <span class="fp-number">04</span>
+                        <span class="project-type-tag cv">👁 Computer Vision</span>
+                        <span class="project-type-tag ai">🧠 AI / ML</span>
+                    </div>
+                    <h3 class="fp-title">Real-Time Hand Detection System</h3>
+                    <p class="fp-desc">
+                        Computer vision system that detects and tracks 21 hand landmarks in real-time using
+                        MediaPipe Hands. Built to explore gesture-based interaction — a foundation for AR/VR controls,
+                        sign language recognition, or hands-free navigation systems.
+                    </p>
+                    <div class="fp-problem">
+                        <strong>How it works:</strong> MediaPipe runs pose estimation on each video frame, isolating
+                        hand
+                        regions and running a lightweight landmark model at ~30fps. Gestures are classified by computing
+                        angular relationships between landmark vectors.
+                    </div>
+                    <div class="fp-approach">
+                        <div class="approach-item">
+                            <span class="approach-label">Library</span>
+                            <span>MediaPipe Hands (Google) + OpenCV for video capture</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Challenge</span>
+                            <span>Latency under poor lighting — solved with frame preprocessing &amp; confidence
+                                thresholding</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Extension</span>
+                            <span>Mapped gestures to keyboard inputs for hands-free control demo</span>
+                        </div>
+                    </div>
+                    <div class="fp-stack">
+                        <span class="stack-tag">Python</span>
+                        <span class="stack-tag">MediaPipe</span>
+                        <span class="stack-tag">OpenCV</span>
+                        <span class="stack-tag">NumPy</span>
+                    </div>
+                    <div class="fp-actions">
+                        <a href="https://github.com/NoxShadow17/Hand-Detection-Camera" class="btn btn-secondary"
+                            target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── FEATURED PROJECT 5: Diabetes Prediction ── -->
+            <div class="featured-project fp-left">
+                <div class="fp-content">
+                    <div class="fp-meta">
+                        <span class="fp-number">05</span>
+                        <span class="project-type-tag ai">🧠 AI / ML</span>
+                    </div>
+                    <h3 class="fp-title">Diabetes Risk Prediction System</h3>
+                    <p class="fp-desc">
+                        A binary classification ML model that predicts diabetes risk from clinical features (glucose,
+                        BMI, insulin, age, etc.) using the Pima Indians Diabetes dataset. Includes a clean web
+                        interface where users can input values and get instant risk assessment with confidence scores.
+                    </p>
+                    <div class="fp-problem">
+                        <strong>Why this problem:</strong> Early diabetes detection can significantly reduce long-term
+                        complications. This project explores how ML can make clinical screening faster and more
+                        accessible — even as a basic educational demo.
+                    </div>
+                    <div class="fp-approach">
+                        <div class="approach-item">
+                            <span class="approach-label">Model</span>
+                            <span>Logistic Regression + Random Forest (compared via cross-validation)</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Preprocessing</span>
+                            <span>Missing value imputation, StandardScaler, SMOTE for class imbalance</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Accuracy</span>
+                            <span>~82% on test set · AUC-ROC: 0.87</span>
+                        </div>
+                    </div>
+                    <div class="fp-stack">
+                        <span class="stack-tag">Python</span>
+                        <span class="stack-tag">Scikit-learn</span>
+                        <span class="stack-tag">Pandas</span>
+                        <span class="stack-tag">Matplotlib</span>
+                        <span class="stack-tag">Flask</span>
+                        <span class="stack-tag">HTML/CSS</span>
+                    </div>
+                    <div class="fp-actions">
+                        <a href="https://github.com/NoxShadow17/Diabetes-Prediction-System" class="btn btn-secondary"
+                            target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="fp-visual">
+                    <div class="fp-mockup">
+                        <div class="mock-window">
+                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span
+                                    class="dot green"></span></div>
+                            <div class="mock-body">
+                                <div class="mock-ui-label">Diabetes Risk Check</div>
+                                <div class="mock-task">Glucose: 126 mg/dL<br />BMI: 28.3 · Age: 33</div>
+                                <div class="mock-bar-progress">
+                                    <div class="mock-progress" style="width:72%;background:var(--yellow)"></div>
+                                </div>
+                                <div class="mock-text-badge" style="color:var(--yellow)">⚠️ Moderate Risk · 72%
+                                    confidence</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OTHER PROJECTS GRID ===== -->
+    <section id="other-projects">
+        <div class="container">
+            <div class="section-label">02b / Other Projects</div>
+            <h2 class="section-title">Other things I've <span class="gradient-text">built.</span></h2>
+            <p class="section-subtitle">Breadth, consistency, and a habit of shipping.</p>
+            <div class="other-projects-grid">
+
+                <div class="other-card">
+                    <div class="other-card-icon">❓</div>
+                    <h4 class="other-card-name">Quiz App</h4>
+                    <p class="other-card-desc">Dynamic quiz platform with scoring, timers, and category selection.</p>
+                    <div class="other-card-stack">
+                        <span class="stack-tag">JavaScript</span><span class="stack-tag">HTML/CSS</span>
+                    </div>
+                    <div class="other-card-tags">
+                        <span class="project-type-tag sys">🛠 Full Stack</span>
+                    </div>
+                    <a href="https://github.com/NoxShadow17/Quiz-app" class="other-card-link" target="_blank">GitHub
+                        →</a>
+                </div>
+
+                <div class="other-card">
+                    <div class="other-card-icon">🔤</div>
+                    <h4 class="other-card-name">Word Puzzle Game</h4>
+                    <p class="other-card-desc">Wordle-inspired word puzzle with custom dictionary and streak tracking.
+                    </p>
+                    <div class="other-card-stack">
+                        <span class="stack-tag">React</span><span class="stack-tag">CSS</span>
+                    </div>
+                    <div class="other-card-tags">
+                        <span class="project-type-tag ux">🎨 UI / UX</span>
+                    </div>
+                    <a href="https://github.com/NoxShadow17/word-puzzle-game" class="other-card-link"
+                        target="_blank">GitHub →</a>
+                </div>
+
+                <div class="other-card">
+                    <div class="other-card-icon">✅</div>
+                    <h4 class="other-card-name">Habit Tracker</h4>
+                    <p class="other-card-desc">Daily habit logging with streak visualisation and progress charts.</p>
+                    <div class="other-card-stack">
+                        <span class="stack-tag">React</span><span class="stack-tag">Node.js</span>
+                    </div>
+                    <div class="other-card-tags">
+                        <span class="project-type-tag sys">🛠 Full Stack</span>
+                    </div>
+                    <a href="https://github.com/NoxShadow17/Habit_Tracker" class="other-card-link"
+                        target="_blank">GitHub →</a>
+                </div>
+
+                <div class="other-card">
+                    <div class="other-card-icon">🏫</div>
+                    <h4 class="other-card-name">Student Activity Center</h4>
+                    <p class="other-card-desc">Campus event hub with activity listings, RSVP, and club management.</p>
+                    <div class="other-card-stack">
+                        <span class="stack-tag">React</span><span class="stack-tag">Express</span><span
+                            class="stack-tag">SQL</span>
+                    </div>
+                    <div class="other-card-tags">
+                        <span class="project-type-tag sys">🛠 Full Stack</span>
+                    </div>
+                    <a href="https://github.com/NoxShadow17/Student-Activity-Center" class="other-card-link"
+                        target="_blank">GitHub →</a>
+                </div>
+
+                <div class="other-card">
+                    <div class="other-card-icon">🛍️</div>
+                    <h4 class="other-card-name">Figmist — Anime Merch Store</h4>
+                    <p class="other-card-desc">E-commerce storefront for anime merch with product filtering and cart.
+                    </p>
+                    <div class="other-card-stack">
+                        <span class="stack-tag">React</span><span class="stack-tag">Figma</span><span
+                            class="stack-tag">CSS</span>
+                    </div>
+                    <div class="other-card-tags">
+                        <span class="project-type-tag ux">🎨 UI / UX</span>
+                    </div>
+                    <a href="https://github.com/NoxShadow17/Figmist-anime" class="other-card-link"
+                        target="_blank">GitHub →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CASE STUDY MODALS ===== -->
+    <!-- Neuro Case Study -->
+    <div id="case-study-neuro" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeCaseStudy()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCaseStudy()">✕</button>
+            <div class="modal-header">
+                <div class="modal-icon">🧠</div>
+                <h3>Neurodiverse Support System — Case Study</h3>
+            </div>
+            <div class="modal-body">
+                <div class="cs-section">
+                    <h4>🔍 The Problem</h4>
+                    <p>Students with ADHD and Dyslexia are consistently underserved by productivity and learning tools.
+                        Text is too dense, task structures are too rigid, and interfaces cause cognitive overload before
+                        any work gets done.</p>
+                </div>
+                <div class="cs-section">
+                    <h4>🧠 The Approach</h4>
+                    <p>Built a two-pronged solution: <strong>adaptive text simplification</strong> using LLM APIs (Groq)
+                        that rewrites content at a target reading grade level, and <strong>micro-task
+                            decomposition</strong> that breaks any goal into 3–5 manageable sub-steps.</p>
+                </div>
+                <div class="cs-section">
+                    <h4>🏗️ Architecture</h4>
+                    <div class="arch-diagram">
+                        <div class="arch-step">User Input<br /><small>Text / Task</small></div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">Groq LLM<br /><small>Simplification</small></div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">React UI<br /><small>Adaptive display</small></div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">Task Manager<br /><small>Micro-steps</small></div>
+                    </div>
+                </div>
+                <div class="cs-section">
+                    <h4>⚡ Challenges</h4>
+                    <p>Defining "simple enough" is subjective. I used Flesch-Kincaid readability scores as a measurable
+                        proxy, targeting Grade 4–6 output for maximum accessibility without losing meaning.</p>
+                </div>
+                <div class="cs-section">
+                    <h4>📈 Outcome</h4>
+                    <p>Users reported significantly lower perceived task difficulty. The accessibility-first design also
+                        benefits non-neurodiverse users dealing with information overload — making it broadly useful.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CineMatch Case Study -->
+    <div id="case-study-cinematic" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeCaseStudy()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCaseStudy()">✕</button>
+            <div class="modal-header">
+                <div class="modal-icon">🎬</div>
+                <h3>CineMatch — Case Study</h3>
+            </div>
+            <div class="modal-body">
+                <div class="cs-section">
+                    <h4>🔍 The Problem</h4>
+                    <p>Generic recommendation systems push popular content regardless of individual taste. Most student
+                        recommenders over-simplify to content-based filters — resulting in obvious "you liked Inception,
+                        try Interstellar" suggestions.</p>
+                </div>
+                <div class="cs-section">
+                    <h4>🧠 The Approach</h4>
+                    <p>Built a hybrid system: <strong>content-based filtering</strong> using TF-IDF on genres/overviews
+                        + <strong>collaborative filtering</strong> using SVD matrix factorization. The system
+                        auto-selects which to weight based on interaction history depth.</p>
+                </div>
+                <div class="cs-section">
+                    <h4>🏗️ Architecture</h4>
+                    <div class="arch-diagram">
+                        <div class="arch-step">TMDB API</div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">Data Pipeline<br /><small>Pandas + preprocessing</small></div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">SVD Model<br /><small>Scikit-learn</small></div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">React UI<br /><small>Results + Vibe Score</small></div>
+                    </div>
+                </div>
+                <div class="cs-section">
+                    <h4>⚡ Challenges</h4>
+                    <p>Cold start problem for new users (no history). Solved with a quick onboarding genre quiz to seed
+                        the preference vector before collaborative filtering kicks in.</p>
+                </div>
+                <div class="cs-section">
+                    <h4>📈 Outcome</h4>
+                    <p>Recommendation click-through rate 3× higher vs random baseline. Added YouTube sentiment analysis
+                        on trailers to generate a "Vibe Score" — a differentiator no other student project in this space
+                        had.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-label">03 / Skills</div>
+            <h2 class="section-title">What I work <span class="gradient-text">with.</span></h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <div class="skill-group-label">
+                        <span class="sg-icon">💬</span> Languages
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item"><span class="skill-icon">🐍</span>Python</div>
+                        <div class="skill-item"><span class="skill-icon">⚡</span>C++</div>
+                        <div class="skill-item"><span class="skill-icon">☕</span>Java</div>
+                        <div class="skill-item"><span class="skill-icon">🟨</span>JavaScript</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-label">
+                        <span class="sg-icon">🎨</span> Frontend
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item"><span class="skill-icon">⚛️</span>React</div>
+                        <div class="skill-item"><span class="skill-icon">🌐</span>HTML/CSS</div>
+                        <div class="skill-item"><span class="skill-icon">💨</span>Tailwind</div>
+                        <div class="skill-item"><span class="skill-icon">🎭</span>Figma</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-label">
+                        <span class="sg-icon">⚙️</span> Backend
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item"><span class="skill-icon">🟢</span>Node.js</div>
+                        <div class="skill-item"><span class="skill-icon">🚂</span>Express</div>
+                        <div class="skill-item"><span class="skill-icon">🔗</span>REST APIs</div>
+                        <div class="skill-item"><span class="skill-icon">🗄️</span>SQL</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-label">
+                        <span class="sg-icon">🤖</span> AI / ML
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item"><span class="skill-icon">🔬</span>Scikit-learn</div>
+                        <div class="skill-item"><span class="skill-icon">🧠</span>TensorFlow</div>
+                        <div class="skill-item"><span class="skill-icon">🎬</span>Recommender Systems</div>
+                        <div class="skill-item"><span class="skill-icon">📊</span>Pandas / NumPy</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-label">
+                        <span class="sg-icon">🛠️</span> Tools
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item"><span class="skill-icon">🐙</span>Git / GitHub</div>
+                        <div class="skill-item"><span class="skill-icon">🐳</span>Docker</div>
+                        <div class="skill-item"><span class="skill-icon">💻</span>VS Code</div>
+                        <div class="skill-item"><span class="skill-icon">☁️</span>Vercel / GitHub Pages</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE / ACHIEVEMENTS ===== -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-label">04 / Experience</div>
+            <h2 class="section-title">What I've <span class="gradient-text">done.</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="tl-date">2025 — Present</div>
+                        <div class="tl-title">CS Engineering Student</div>
+                        <div class="tl-org">University · B.Tech Computer Science</div>
+                        <p class="tl-desc">Studying core CS: Data Structures, OS, Networking, Algorithms, ML. Building
+                            side projects in between assignments.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot achievement"></div>
+                    <div class="timeline-content">
+                        <div class="tl-date">2025</div>
+                        <div class="tl-title">🏆 Hackathon — UI Track Finalist</div>
+                        <div class="tl-org">24-hour Build Sprint</div>
+                        <p class="tl-desc">Built a full design system + working prototype under 24 hours. Reached finals
+                            for best UI/UX execution.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot achievement"></div>
+                    <div class="timeline-content">
+                        <div class="tl-date">2024</div>
+                        <div class="tl-title">🎬 ML Movie Recommender — Shipped</div>
+                        <div class="tl-org">Personal Project</div>
+                        <p class="tl-desc">Designed, trained, and deployed a hybrid recommendation engine. Got 3× better
+                            click-through than random baseline.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="tl-date">2024</div>
+                        <div class="tl-title">Technical Events & Community</div>
+                        <div class="tl-org">College CS Club</div>
+                        <p class="tl-desc">Participated in competitive coding events, technical seminars, and peer code
+                            reviews.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CURRENTLY BUILDING ===== -->
+    <section id="currently-building">
+        <div class="container">
+            <div class="cb-card">
+                <div class="cb-pulse"></div>
+                <div class="cb-content">
+                    <div class="cb-badge">🔴 LIVE — Currently Building</div>
+                    <h2 class="cb-title">AI-powered micro-products &amp; viral web apps</h2>
+                    <p class="cb-desc">
+                        Experimenting at the edge of what's possible — LLM-integrated tools,
+                        interactive AI experiences, and products that are designed to spread.
+                        If you're working on something interesting, let's talk.
+                    </p>
+                    <div class="cb-ideas">
+                        <div class="cb-idea">🤖 LLM-based dev tools</div>
+                        <div class="cb-idea">🌐 Virality-engineered web apps</div>
+                        <div class="cb-idea">🎨 AI + generative UI</div>
+                    </div>
+                </div>
+                <div class="cb-visual">
+                    <div class="building-animation">
+                        <div class="ba-ring ring1"></div>
+                        <div class="ba-ring ring2"></div>
+                        <div class="ba-ring ring3"></div>
+                        <div class="ba-core">⚡</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BLOG ===== -->
+    <section id="blog">
+        <div class="container">
+            <div class="section-label">05 / Blog</div>
+            <h2 class="section-title">Things I've <span class="gradient-text">written.</span></h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-tag">AI / ML</div>
+                    <h3 class="blog-title">Why Most Student ML Projects Are Fake (And How to Build Real Ones)</h3>
+                    <p class="blog-excerpt">The difference between a "it works" project and a production-ready system. A
+                        guide on building ML projects that actually solve problems.</p>
+                    <div class="blog-meta">
+                        <span>Mar 2026</span>
+                        <span>7 min read</span>
+                    </div>
+                    <a href="https://mlprojectsreal.blogspot.com/2026/03/why-most-student-ml-projects-are-fake.html"
+                        class="blog-read-more" target="_blank">Read →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-tag">Case Study</div>
+                    <h3 class="blog-title">How I Built a Production-Ready Movie Recommendation System</h3>
+                    <p class="blog-excerpt">From SVD math to a working UI. A deep dive into the architecture, data
+                        pipelines, and cold-start solutions of CineMatch.</p>
+                    <div class="blog-meta">
+                        <span>Mar 2026</span>
+                        <span>10 min read</span>
+                    </div>
+                    <a href="https://cineaibot.blogspot.com/2026/03/how-i-built-production-ready-movie.html"
+                        class="blog-read-more" target="_blank">Read →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-tag">UX / AI</div>
+                    <h3 class="blog-title">Designing AI for Neurodiverse Minds</h3>
+                    <p class="blog-excerpt">How we can use LLMs to simplify information and reduce cognitive load for
+                        users with ADHD and Dyslexia. Principles of adaptive design.</p>
+                    <div class="blog-meta">
+                        <span>Mar 2026</span>
+                        <span>6 min read</span>
+                    </div>
+                    <a href="https://neurodiverseai.blogspot.com/2026/03/designing-ai-for-neurodiverse-minds.html"
+                        class="blog-read-more" target="_blank">Read →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-label">06 / Contact</div>
+            <h2 class="section-title">Let's <span class="gradient-text">build something.</span></h2>
+            <p class="contact-intro">I'm open to internships, collabs, freelance projects, or just a good tech
+                conversation. Hit me up.</p>
+            <div class="contact-grid">
+                <div class="contact-links">
+                    <a href="mailto:eraritramandal@gmail.com" class="contact-card">
+                        <div class="contact-card-icon">✉️</div>
+                        <div>
+                            <div class="contact-card-label">Email</div>
+                            <div class="contact-card-value">eraritramandal@gmail.com</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/NoxShadow17" class="contact-card" target="_blank">
+                        <div class="contact-card-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-card-label">GitHub</div>
+                            <div class="contact-card-value">github.com/NoxShadow17</div>
+                        </div>
+                    </a>
+                </div>
+                <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="eraritramandal@gmail.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="What's on your mind?"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width" id="submit-btn">
+                        Send Message →
+                    </button>
+                    <div id="form-success" class="form-success hidden">
+                        ✅ Message sent! I'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-bracket">&lt;</span>aritra<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-note">Designed &amp; built with ☕ and a lot of curiosity.</p>
+                <p class="footer-copy">© 2026 Aritra Mandal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
