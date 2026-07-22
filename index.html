@@ -202,97 +202,96 @@
         <div class="container">
             <div class="section-label">02 / Featured Projects</div>
             <h2 class="section-title">Built with <span class="gradient-text">depth.</span></h2>
-            <p class="section-subtitle">5 projects I can talk about for hours. Each one taught me something real.</p>
+            <p class="section-subtitle">Flagship AI, ML, and hardware systems engineered for real-world impact.</p>
 
-            <!-- ── FEATURED PROJECT 1: Neurodiverse Support System ── -->
+            <!-- ── FEATURED PROJECT 1: Advanced Movie Recommendation System ── -->
             <div class="featured-project fp-left">
                 <div class="fp-content">
                     <div class="fp-meta">
                         <span class="fp-number">01</span>
                         <span class="project-type-tag ai">🧠 AI / ML</span>
-                        <span class="project-type-tag ux">🎨 UI / UX</span>
+                        <span class="project-type-tag sys">🛠 Full Stack</span>
                         <div class="fp-badge-flagship">🔥 Flagship</div>
                     </div>
-                    <h3 class="fp-title">Neurodiverse Support System</h3>
+                    <h3 class="fp-title">Advanced Movie Recommendation System</h3>
                     <p class="fp-desc">
-                        An adaptive task management and text simplification platform designed for users with ADHD and
-                        Dyslexia. The system adjusts reading complexity in real-time using NLP, breaks overwhelming
-                        tasks
-                        into micro-steps, and adapts its UI based on cognitive load cues.
+                        Engineered a hybrid recommendation engine combining user-based collaborative filtering (60% weight) via cosine similarity matrix scoring and content-based filtering (40% weight) utilizing Jaccard similarity across movie attributes.
                     </p>
                     <div class="fp-problem">
-                        <strong>Problem:</strong> Standard productivity tools overwhelm neurodiverse users with
-                        wall-of-text instructions and rigid task structures. There was no tool built for
-                        how <em>their</em> brains actually work.
+                        <strong>Performance & Diversity:</strong> Enforced a 40% same-genre penalty cluster algorithm alongside personalized scoring boosts, caching results into a high-performance in-memory service layer to eliminate N+1 database queries.
                     </div>
                     <div class="fp-approach">
                         <div class="approach-item">
-                            <span class="approach-label">ML Used</span>
-                            <span>NLP text simplification (Groq LLM) + rule-based readability scoring</span>
+                            <span class="approach-label">Algorithm</span>
+                            <span>60% Collaborative (Cosine matrix) + 40% Content-based (Jaccard)</span>
                         </div>
                         <div class="approach-item">
-                            <span class="approach-label">UX Choice</span>
-                            <span>High-contrast mode, dyslexia-friendly fonts, reduced visual noise</span>
+                            <span class="approach-label">Optimization</span>
+                            <span>40% same-genre penalty cluster + in-memory cache layer</span>
                         </div>
                         <div class="approach-item">
-                            <span class="approach-label">Key Outcome</span>
-                            <span>Task completion improved significantly in internal user tests</span>
+                            <span class="approach-label">Frontend</span>
+                            <span>13-page React UI with TMDB metadata, watch parties & AI assistant</span>
                         </div>
                     </div>
                     <div class="fp-stack">
                         <span class="stack-tag">Python</span>
-                        <span class="stack-tag">Node.js</span>
-                        <span class="stack-tag">Groq API</span>
+                        <span class="stack-tag">FastAPI</span>
                         <span class="stack-tag">React</span>
-                        <span class="stack-tag">NLP</span>
-                        <span class="stack-tag">Express</span>
+                        <span class="stack-tag">SQLAlchemy</span>
+                        <span class="stack-tag">PostgreSQL</span>
+                        <span class="stack-tag">Scikit-Learn</span>
+                        <span class="stack-tag">TMDB &amp; YouTube APIs</span>
                     </div>
                     <div class="fp-actions">
-                        <a href="https://github.com/NoxShadow17/Neurodiverse-Support-System" class="btn btn-secondary"
-                            target="_blank">
+                        <a href="https://movie-recommendation-system-inky-alpha.vercel.app/" class="btn btn-primary" target="_blank">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/NoxShadow17/Movie-Recommendation-system" class="btn btn-secondary" target="_blank">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
                             </svg>
                             GitHub
                         </a>
-                        <button class="btn-case-study" onclick="openCaseStudy('neuro')">📖 Case Study</button>
+                        <button class="btn-case-study" onclick="openCaseStudy('movie')">📖 Case Study</button>
                     </div>
                 </div>
                 <div class="fp-visual">
-                    <div class="fp-mockup fp-mockup-neuro">
+                    <div class="fp-mockup fp-mockup-cinema">
                         <div class="mock-window">
-                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span
-                                    class="dot green"></span></div>
+                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
                             <div class="mock-body">
-                                <div class="mock-ui-label">Neurodiverse Support</div>
-                                <div class="mock-task">📋 Task: Write report<br /><small>Simplified into 4 micro-steps
-                                        ✓</small></div>
-                                <div class="mock-bar-progress">
-                                    <div class="mock-progress" style="width:65%"></div>
+                                <div class="mock-ui-label">Hybrid Recommendation Engine (60/40)</div>
+                                <div class="mock-recs">
+                                    <div class="mock-rec-item">🎬 Parasite · 98% Hybrid Match</div>
+                                    <div class="mock-rec-item">🎬 Interstellar · 94% Cosine Score</div>
+                                    <div class="mock-rec-item">🎬 Whiplash · 91% Jaccard Score</div>
                                 </div>
-                                <div class="mock-text-badge">Reading Level: Grade 6 ✓</div>
+                                <div class="mock-text-badge">⚡ Cache Layer: In-Memory (0 N+1 Queries)</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- ── FEATURED PROJECT 2: Movie Recommender ── -->
+            <!-- ── FEATURED PROJECT 2: NeuroAssist ── -->
             <div class="featured-project fp-right">
                 <div class="fp-visual">
-                    <div class="fp-mockup fp-mockup-cinema">
+                    <div class="fp-mockup fp-mockup-neuro">
                         <div class="mock-window">
-                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span
-                                    class="dot green"></span></div>
+                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
                             <div class="mock-body">
-                                <div class="mock-ui-label">CineMatch</div>
-                                <div class="mock-recs">
-                                    <div class="mock-rec-item">🎬 Parasite · 98% match</div>
-                                    <div class="mock-rec-item">🎬 Oldboy · 95% match</div>
-                                    <div class="mock-rec-item">🎬 Drive · 91% match</div>
+                                <div class="mock-ui-label">NeuroAssist — Dynamic Prompt Engine</div>
+                                <div class="mock-task">📋 System Prompt Rewritten (Llama-3.3-70B)<br /><small>Sensory Profile: Visual / Low Cognitive Overhead ✓</small></div>
+                                <div class="mock-bar-progress">
+                                    <div class="mock-progress" style="width:85%"></div>
                                 </div>
-                                <div class="mock-text-badge">Vibe Score: 🔥 High</div>
+                                <div class="mock-text-badge">🔒 Supabase RLS: auth.uid() = user_id Active</div>
                             </div>
                         </div>
                     </div>
@@ -301,65 +300,149 @@
                     <div class="fp-meta">
                         <span class="fp-number">02</span>
                         <span class="project-type-tag ai">🧠 AI / ML</span>
+                        <span class="project-type-tag sys">🛠 Full Stack</span>
+                        <div class="fp-badge-flagship">🔥 Flagship</div>
                     </div>
-                    <h3 class="fp-title">CineMatch — ML Movie Recommender</h3>
+                    <h3 class="fp-title">NeuroAssist — AI Operating System for Neurodivergent Minds</h3>
                     <p class="fp-desc">
-                        A hybrid recommendation engine combining SVD-based collaborative filtering with TF-IDF
-                        content-based similarity. Powered by the TMDB dataset, with YouTube sentiment analysis
-                        layered on top to generate a "Vibe Score" for each movie.
+                        Built a full-stack, distributed web application using a decoupled client-API architecture designed to reduce executive dysfunction and cognitive load through custom gamification systems and real-time XP ledgers.
                     </p>
                     <div class="fp-problem">
-                        <strong>ML Breakdown:</strong> Cold-start users go through a genre quiz to seed a preference
-                        vector. Returning users get SVD-weighted collaborative recommendations. The system auto-selects
-                        which mode to weight based on interaction history depth.
+                        <strong>Context-Aware LLM Service:</strong> Integrated Groq SDK (Llama-3.3-70B and 3.1-8B) to dynamically rewrite system prompts on the fly based on individual user sensory profiles, delivering tailored micro-task breakdowns.
                     </div>
                     <div class="fp-approach">
                         <div class="approach-item">
-                            <span class="approach-label">Algorithm</span>
-                            <span>SVD matrix factorization + cosine similarity (hybrid)</span>
+                            <span class="approach-label">Groq LLM</span>
+                            <span>Llama-3.3-70B &amp; 3.1-8B for real-time prompt adaptation</span>
                         </div>
                         <div class="approach-item">
-                            <span class="approach-label">Data</span>
-                            <span>TMDB API → Pandas pipeline → Scikit-learn SVD</span>
+                            <span class="approach-label">Security</span>
+                            <span>Supabase RLS policies (auth.uid() = user_id) &amp; PL/pgSQL triggers</span>
                         </div>
                         <div class="approach-item">
-                            <span class="approach-label">Result</span>
-                            <span>3× higher CTR vs random baseline</span>
+                            <span class="approach-label">Ledgers</span>
+                            <span>Real-time XP ledgers &amp; automated daily streak tracking</span>
                         </div>
                     </div>
                     <div class="fp-stack">
-                        <span class="stack-tag">Python</span>
-                        <span class="stack-tag">Scikit-learn</span>
-                        <span class="stack-tag">SVD</span>
-                        <span class="stack-tag">TMDB API</span>
-                        <span class="stack-tag">Pandas</span>
-                        <span class="stack-tag">React</span>
+                        <span class="stack-tag">Next.js 14</span>
+                        <span class="stack-tag">Node.js</span>
+                        <span class="stack-tag">Express</span>
+                        <span class="stack-tag">Supabase Auth &amp; RLS</span>
+                        <span class="stack-tag">Groq SDK (Llama 3)</span>
+                        <span class="stack-tag">PL/pgSQL</span>
                     </div>
                     <div class="fp-actions">
-                        <a href="https://github.com/NoxShadow17/Movie-Recommendation-system" class="btn btn-secondary"
-                            target="_blank">GitHub</a>
-                        <button class="btn-case-study" onclick="openCaseStudy('cinematic')">📖 Case Study</button>
+                        <a href="https://neuro-assist-ai-operating-system-fo.vercel.app/" class="btn btn-primary" target="_blank">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/NoxShadow17/NeuroAssist-AI-Operating-System-for-Neurodivergent-Minds" class="btn btn-secondary" target="_blank">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        <button class="btn-case-study" onclick="openCaseStudy('neuro')">📖 Case Study</button>
                     </div>
                 </div>
             </div>
 
-            <!-- ── FEATURED PROJECT 3: Phishing Detection ── -->
+            <!-- ── FEATURED PROJECT 3: AVERT (Cattle Collision Prevention) ── -->
             <div class="featured-project fp-left">
                 <div class="fp-content">
                     <div class="fp-meta">
                         <span class="fp-number">03</span>
                         <span class="project-type-tag ai">🧠 AI / ML</span>
+                        <span class="project-type-tag cv">👁 Computer Vision</span>
+                        <div class="fp-badge-flagship">⚡ AI-oT</div>
+                    </div>
+                    <h3 class="fp-title">AVERT — Intelligent Cattle Collision Prevention System</h3>
+                    <p class="fp-desc">
+                        Engineered a single-class object detection pipeline by fine-tuning a YOLOv8 Small neural network on a cleansed, unified dataset optimized for harsh highway environments, achieving an 86.2% mAP@0.5, 91% peak recall, and a 0.82 Max F1-Score.
+                    </p>
+                    <div class="fp-problem">
+                        <strong>Decoupled AI-oT Architecture:</strong> Central Python server instantly pushes JSON telemetry to ESP32 microcontrollers for zero-latency LED roadside warnings, operating entirely independent of the real-time Streamlit surveillance dashboard.
+                    </div>
+                    <div class="fp-approach">
+                        <div class="approach-item">
+                            <span class="approach-label">CV Model</span>
+                            <span>Fine-tuned YOLOv8 Small · 86.2% mAP@0.5 · 91% Peak Recall</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Edge FPS</span>
+                            <span>Exported PyTorch weights to ONNX format for max edge FPS</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Telemetry</span>
+                            <span>Async full-duplex WebSockets (asyncio) pushing JSON to ESP32</span>
+                        </div>
+                    </div>
+                    <div class="fp-stack">
+                        <span class="stack-tag">Python</span>
+                        <span class="stack-tag">YOLOv8</span>
+                        <span class="stack-tag">ONNX Runtime</span>
+                        <span class="stack-tag">WebSockets</span>
+                        <span class="stack-tag">C++ / ESP32</span>
+                        <span class="stack-tag">OpenCV</span>
+                        <span class="stack-tag">Streamlit</span>
+                    </div>
+                    <div class="fp-actions">
+                        <a href="https://github.com/NoxShadow17/AVERT" class="btn btn-secondary" target="_blank">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        <button class="btn-case-study" onclick="openCaseStudy('avert')">📖 Case Study</button>
+                    </div>
+                </div>
+                <div class="fp-visual">
+                    <div class="fp-mockup fp-mockup-avert">
+                        <div class="mock-window">
+                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                            <div class="mock-body">
+                                <div class="mock-ui-label">AVERT · Edge YOLOv8 + Telemetry</div>
+                                <div class="mock-avert-status">🚨 Highway Hazard Detected (Obstacle/Cattle)<br /><small>Confidence: 91% · ESP32 Warning LED Triggered</small></div>
+                                <div class="mock-task">📡 WebSocket: Async Full-Duplex JSON Sync<br /><small>ONNX Runtime Inference: High FPS Edge</small></div>
+                                <div class="mock-text-badge">⚡ Response: &lt;15ms Zero-Latency Warning</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── FEATURED PROJECT 4: Phishing Detection ── -->
+            <div class="featured-project fp-right">
+                <div class="fp-visual">
+                    <div class="fp-mockup">
+                        <div class="mock-window">
+                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                            <div class="mock-body">
+                                <div class="mock-ui-label">Phishing Detector</div>
+                                <div class="mock-task" style="color:var(--red)">⚠️ URL: suspicious-bank-login.xyz<br /><small>Phishing detected! Confidence: 97%</small></div>
+                                <div class="mock-task" style="color:var(--green)">✅ URL: github.com/NoxShadow17<br /><small>Safe — Confidence: 99.8%</small></div>
+                                <div class="mock-text-badge">Model: XGBoost · F1: 0.973</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fp-content">
+                    <div class="fp-meta">
+                        <span class="fp-number">04</span>
+                        <span class="project-type-tag ai">🧠 AI / ML</span>
                         <span class="project-type-tag sys">🛠 Full Stack</span>
                     </div>
                     <h3 class="fp-title">Phishing URL &amp; Email Detection</h3>
                     <p class="fp-desc">
-                        A machine learning classifier that detects phishing URLs and malicious emails using feature
-                        extraction from URL structure, domain age, redirect patterns, and email header analysis.
-                        Trained on a labelled dataset of 100K+ samples.
+                        A machine learning classifier that detects phishing URLs and malicious emails using feature extraction from URL structure, domain age, redirect patterns, and email header analysis. Trained on a labelled dataset of 100K+ samples.
                     </p>
                     <div class="fp-problem">
-                        <strong>Problem:</strong> Phishing attacks are one of the top vectors for data breaches.
-                        Rule-based blocklists can't keep up. ML-based pattern recognition can generalise to new threats.
+                        <strong>Problem:</strong> Phishing attacks are one of the top vectors for data breaches. Rule-based blocklists can't keep up. ML-based pattern recognition can generalise to new threats.
                     </div>
                     <div class="fp-approach">
                         <div class="approach-item">
@@ -384,36 +467,64 @@
                         <span class="stack-tag">React</span>
                     </div>
                     <div class="fp-actions">
-                        <a href="https://github.com/NoxShadow17/Phishing-URL-and-Email-detection-using-Machine-Learning"
-                            class="btn btn-secondary" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                <div class="fp-visual">
-                    <div class="fp-mockup">
-                        <div class="mock-window">
-                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span
-                                    class="dot green"></span></div>
-                            <div class="mock-body">
-                                <div class="mock-ui-label">Phishing Detector</div>
-                                <div class="mock-task" style="color:var(--red)">⚠️ URL:
-                                    suspicious-bank-login.xyz<br /><small>Phishing detected! Confidence: 97%</small>
-                                </div>
-                                <div class="mock-task" style="color:var(--green)">✅ URL:
-                                    github.com/NoxShadow17<br /><small>Safe — Confidence: 99.8%</small></div>
-                                <div class="mock-text-badge">Model: XGBoost · F1: 0.973</div>
-                            </div>
-                        </div>
+                        <a href="https://github.com/NoxShadow17/Phishing-URL-and-Email-detection-using-Machine-Learning" class="btn btn-secondary" target="_blank">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- ── FEATURED PROJECT 4: Hand Detection ── -->
-            <div class="featured-project fp-right">
+            <!-- ── FEATURED PROJECT 5: Hand Detection ── -->
+            <div class="featured-project fp-left">
+                <div class="fp-content">
+                    <div class="fp-meta">
+                        <span class="fp-number">05</span>
+                        <span class="project-type-tag cv">👁 Computer Vision</span>
+                        <span class="project-type-tag ai">🧠 AI / ML</span>
+                    </div>
+                    <h3 class="fp-title">Real-Time Hand Detection System</h3>
+                    <p class="fp-desc">
+                        Computer vision system that detects and tracks 21 hand landmarks in real-time using MediaPipe Hands. Built to explore gesture-based interaction — a foundation for AR/VR controls, sign language recognition, or hands-free navigation systems.
+                    </p>
+                    <div class="fp-problem">
+                        <strong>How it works:</strong> MediaPipe runs pose estimation on each video frame, isolating hand regions and running a lightweight landmark model at ~30fps. Gestures are classified by computing angular relationships between landmark vectors.
+                    </div>
+                    <div class="fp-approach">
+                        <div class="approach-item">
+                            <span class="approach-label">Library</span>
+                            <span>MediaPipe Hands (Google) + OpenCV for video capture</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Challenge</span>
+                            <span>Latency under poor lighting — solved with frame preprocessing &amp; confidence thresholding</span>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-label">Extension</span>
+                            <span>Mapped gestures to keyboard inputs for hands-free control demo</span>
+                        </div>
+                    </div>
+                    <div class="fp-stack">
+                        <span class="stack-tag">Python</span>
+                        <span class="stack-tag">MediaPipe</span>
+                        <span class="stack-tag">OpenCV</span>
+                        <span class="stack-tag">NumPy</span>
+                    </div>
+                    <div class="fp-actions">
+                        <a href="https://github.com/NoxShadow17/Hand-Detection-Camera" class="btn btn-secondary" target="_blank">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
                 <div class="fp-visual">
                     <div class="fp-mockup fp-mockup-cv">
                         <div class="mock-window">
-                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span
-                                    class="dot green"></span></div>
+                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
                             <div class="mock-body">
                                 <div class="mock-ui-label">Hand Detection · CV</div>
                                 <div class="mock-cv-view">
@@ -431,114 +542,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="fp-content">
-                    <div class="fp-meta">
-                        <span class="fp-number">04</span>
-                        <span class="project-type-tag cv">👁 Computer Vision</span>
-                        <span class="project-type-tag ai">🧠 AI / ML</span>
-                    </div>
-                    <h3 class="fp-title">Real-Time Hand Detection System</h3>
-                    <p class="fp-desc">
-                        Computer vision system that detects and tracks 21 hand landmarks in real-time using
-                        MediaPipe Hands. Built to explore gesture-based interaction — a foundation for AR/VR controls,
-                        sign language recognition, or hands-free navigation systems.
-                    </p>
-                    <div class="fp-problem">
-                        <strong>How it works:</strong> MediaPipe runs pose estimation on each video frame, isolating
-                        hand
-                        regions and running a lightweight landmark model at ~30fps. Gestures are classified by computing
-                        angular relationships between landmark vectors.
-                    </div>
-                    <div class="fp-approach">
-                        <div class="approach-item">
-                            <span class="approach-label">Library</span>
-                            <span>MediaPipe Hands (Google) + OpenCV for video capture</span>
-                        </div>
-                        <div class="approach-item">
-                            <span class="approach-label">Challenge</span>
-                            <span>Latency under poor lighting — solved with frame preprocessing &amp; confidence
-                                thresholding</span>
-                        </div>
-                        <div class="approach-item">
-                            <span class="approach-label">Extension</span>
-                            <span>Mapped gestures to keyboard inputs for hands-free control demo</span>
-                        </div>
-                    </div>
-                    <div class="fp-stack">
-                        <span class="stack-tag">Python</span>
-                        <span class="stack-tag">MediaPipe</span>
-                        <span class="stack-tag">OpenCV</span>
-                        <span class="stack-tag">NumPy</span>
-                    </div>
-                    <div class="fp-actions">
-                        <a href="https://github.com/NoxShadow17/Hand-Detection-Camera" class="btn btn-secondary"
-                            target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ── FEATURED PROJECT 5: Diabetes Prediction ── -->
-            <div class="featured-project fp-left">
-                <div class="fp-content">
-                    <div class="fp-meta">
-                        <span class="fp-number">05</span>
-                        <span class="project-type-tag ai">🧠 AI / ML</span>
-                    </div>
-                    <h3 class="fp-title">Diabetes Risk Prediction System</h3>
-                    <p class="fp-desc">
-                        A binary classification ML model that predicts diabetes risk from clinical features (glucose,
-                        BMI, insulin, age, etc.) using the Pima Indians Diabetes dataset. Includes a clean web
-                        interface where users can input values and get instant risk assessment with confidence scores.
-                    </p>
-                    <div class="fp-problem">
-                        <strong>Why this problem:</strong> Early diabetes detection can significantly reduce long-term
-                        complications. This project explores how ML can make clinical screening faster and more
-                        accessible — even as a basic educational demo.
-                    </div>
-                    <div class="fp-approach">
-                        <div class="approach-item">
-                            <span class="approach-label">Model</span>
-                            <span>Logistic Regression + Random Forest (compared via cross-validation)</span>
-                        </div>
-                        <div class="approach-item">
-                            <span class="approach-label">Preprocessing</span>
-                            <span>Missing value imputation, StandardScaler, SMOTE for class imbalance</span>
-                        </div>
-                        <div class="approach-item">
-                            <span class="approach-label">Accuracy</span>
-                            <span>~82% on test set · AUC-ROC: 0.87</span>
-                        </div>
-                    </div>
-                    <div class="fp-stack">
-                        <span class="stack-tag">Python</span>
-                        <span class="stack-tag">Scikit-learn</span>
-                        <span class="stack-tag">Pandas</span>
-                        <span class="stack-tag">Matplotlib</span>
-                        <span class="stack-tag">Flask</span>
-                        <span class="stack-tag">HTML/CSS</span>
-                    </div>
-                    <div class="fp-actions">
-                        <a href="https://github.com/NoxShadow17/Diabetes-Prediction-System" class="btn btn-secondary"
-                            target="_blank">GitHub</a>
-                    </div>
-                </div>
-                <div class="fp-visual">
-                    <div class="fp-mockup">
-                        <div class="mock-window">
-                            <div class="mock-bar"><span class="dot red"></span><span class="dot yellow"></span><span
-                                    class="dot green"></span></div>
-                            <div class="mock-body">
-                                <div class="mock-ui-label">Diabetes Risk Check</div>
-                                <div class="mock-task">Glucose: 126 mg/dL<br />BMI: 28.3 · Age: 33</div>
-                                <div class="mock-bar-progress">
-                                    <div class="mock-progress" style="width:72%;background:var(--yellow)"></div>
-                                </div>
-                                <div class="mock-text-badge" style="color:var(--yellow)">⚠️ Moderate Risk · 72%
-                                    confidence</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -552,6 +555,19 @@
             <div class="other-projects-grid">
 
                 <div class="other-card">
+                    <div class="other-card-icon">🩺</div>
+                    <h4 class="other-card-name">Diabetes Risk Prediction</h4>
+                    <p class="other-card-desc">Binary classification ML model evaluating clinical features with Scikit-learn and Flask UI.</p>
+                    <div class="other-card-stack">
+                        <span class="stack-tag">Python</span><span class="stack-tag">Scikit-learn</span><span class="stack-tag">Flask</span>
+                    </div>
+                    <div class="other-card-tags">
+                        <span class="project-type-tag ai">🧠 AI / ML</span>
+                    </div>
+                    <a href="https://github.com/NoxShadow17/Diabetes-Prediction-System" class="other-card-link" target="_blank">GitHub →</a>
+                </div>
+
+                <div class="other-card">
                     <div class="other-card-icon">❓</div>
                     <h4 class="other-card-name">Quiz App</h4>
                     <p class="other-card-desc">Dynamic quiz platform with scoring, timers, and category selection.</p>
@@ -561,8 +577,7 @@
                     <div class="other-card-tags">
                         <span class="project-type-tag sys">🛠 Full Stack</span>
                     </div>
-                    <a href="https://github.com/NoxShadow17/Quiz-app" class="other-card-link" target="_blank">GitHub
-                        →</a>
+                    <a href="https://github.com/NoxShadow17/Quiz-app" class="other-card-link" target="_blank">GitHub →</a>
                 </div>
 
                 <div class="other-card">
@@ -630,98 +645,140 @@
     </section>
 
     <!-- ===== CASE STUDY MODALS ===== -->
-    <!-- Neuro Case Study -->
-    <div id="case-study-neuro" class="modal hidden">
+    <!-- Movie Recommendation System Case Study -->
+    <div id="case-study-movie" class="modal hidden">
         <div class="modal-backdrop" onclick="closeCaseStudy()"></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeCaseStudy()">✕</button>
             <div class="modal-header">
-                <div class="modal-icon">🧠</div>
-                <h3>Neurodiverse Support System — Case Study</h3>
+                <div class="modal-icon">🎬</div>
+                <h3>Advanced Movie Recommendation System — Case Study</h3>
             </div>
             <div class="modal-body">
                 <div class="cs-section">
                     <h4>🔍 The Problem</h4>
-                    <p>Students with ADHD and Dyslexia are consistently underserved by productivity and learning tools.
-                        Text is too dense, task structures are too rigid, and interfaces cause cognitive overload before
-                        any work gets done.</p>
+                    <p>Traditional recommendation engines rely purely on single-dimensional similarity metrics or suffer heavy performance degradation due to N+1 database querying and generic recommendation clustering.</p>
                 </div>
                 <div class="cs-section">
-                    <h4>🧠 The Approach</h4>
-                    <p>Built a two-pronged solution: <strong>adaptive text simplification</strong> using LLM APIs (Groq)
-                        that rewrites content at a target reading grade level, and <strong>micro-task
-                            decomposition</strong> that breaks any goal into 3–5 manageable sub-steps.</p>
+                    <h4>🧠 The Hybrid Engine</h4>
+                    <p>Engineered a weighted hybrid recommendation algorithm: <strong>60% user-based collaborative filtering</strong> using cosine similarity matrix scoring combined with <strong>40% content-based filtering</strong> leveraging Jaccard similarity across rich movie attributes.</p>
                 </div>
                 <div class="cs-section">
-                    <h4>🏗️ Architecture</h4>
+                    <h4>🏗️ Architecture &amp; Caching</h4>
                     <div class="arch-diagram">
-                        <div class="arch-step">User Input<br /><small>Text / Task</small></div>
+                        <div class="arch-step">TMDB &amp; YouTube APIs<br /><small>Metadata Streaming</small></div>
                         <div class="arch-arrow">→</div>
-                        <div class="arch-step">Groq LLM<br /><small>Simplification</small></div>
+                        <div class="arch-step">FastAPI Backend<br /><small>Scikit-Learn Engine</small></div>
                         <div class="arch-arrow">→</div>
-                        <div class="arch-step">React UI<br /><small>Adaptive display</small></div>
+                        <div class="arch-step">In-Memory Cache<br /><small>0 N+1 Queries</small></div>
                         <div class="arch-arrow">→</div>
-                        <div class="arch-step">Task Manager<br /><small>Micro-steps</small></div>
+                        <div class="arch-step">13-Page React App<br /><small>Watch Parties &amp; AI Bot</small></div>
                     </div>
                 </div>
                 <div class="cs-section">
-                    <h4>⚡ Challenges</h4>
-                    <p>Defining "simple enough" is subjective. I used Flesch-Kincaid readability scores as a measurable
-                        proxy, targeting Grade 4–6 output for maximum accessibility without losing meaning.</p>
+                    <h4>⚡ Diversity Optimization</h4>
+                    <p>Implemented a 40% same-genre penalty cluster algorithm alongside personalized scoring boosts to avoid echo chambers and increase suggestion variety.</p>
                 </div>
                 <div class="cs-section">
-                    <h4>📈 Outcome</h4>
-                    <p>Users reported significantly lower perceived task difficulty. The accessibility-first design also
-                        benefits non-neurodiverse users dealing with information overload — making it broadly useful.
-                    </p>
+                    <h4>📈 Outcome &amp; Features</h4>
+                    <p>Built a full 13-page React experience with real-time TMDB metadata streaming, synchronized watch parties, review sentiment analysis, and an embedded conversational AI assistant.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- CineMatch Case Study -->
+    <!-- Also alias case-study-cinematic -->
     <div id="case-study-cinematic" class="modal hidden">
         <div class="modal-backdrop" onclick="closeCaseStudy()"></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeCaseStudy()">✕</button>
             <div class="modal-header">
                 <div class="modal-icon">🎬</div>
-                <h3>CineMatch — Case Study</h3>
+                <h3>Advanced Movie Recommendation System — Case Study</h3>
             </div>
             <div class="modal-body">
                 <div class="cs-section">
                     <h4>🔍 The Problem</h4>
-                    <p>Generic recommendation systems push popular content regardless of individual taste. Most student
-                        recommenders over-simplify to content-based filters — resulting in obvious "you liked Inception,
-                        try Interstellar" suggestions.</p>
+                    <p>Traditional recommendation engines rely purely on single-dimensional similarity metrics or suffer heavy performance degradation due to N+1 database querying.</p>
                 </div>
                 <div class="cs-section">
-                    <h4>🧠 The Approach</h4>
-                    <p>Built a hybrid system: <strong>content-based filtering</strong> using TF-IDF on genres/overviews
-                        + <strong>collaborative filtering</strong> using SVD matrix factorization. The system
-                        auto-selects which to weight based on interaction history depth.</p>
+                    <h4>🧠 The Hybrid Engine</h4>
+                    <p>60% User-Based Collaborative Filtering (Cosine Matrix) + 40% Content-Based Filtering (Jaccard Similarity) + 40% Same-Genre Penalty Cluster Algorithm.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NeuroAssist Case Study -->
+    <div id="case-study-neuro" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeCaseStudy()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCaseStudy()">✕</button>
+            <div class="modal-header">
+                <div class="modal-icon">🧠</div>
+                <h3>NeuroAssist — AI Operating System for Neurodivergent Minds — Case Study</h3>
+            </div>
+            <div class="modal-body">
+                <div class="cs-section">
+                    <h4>🔍 The Problem</h4>
+                    <p>Individuals experiencing executive dysfunction and high cognitive load face friction with standard rigid project management and task tracking software.</p>
                 </div>
                 <div class="cs-section">
-                    <h4>🏗️ Architecture</h4>
+                    <h4>🧠 Context-Aware Prompt Rewriting</h4>
+                    <p>Built a custom prompt engineering pipeline using <strong>Groq SDK (Llama-3.3-70B and 3.1-8B)</strong> that dynamically rewrites system prompts on the fly according to sensory profiles to breakdown goals into micro-actions.</p>
+                </div>
+                <div class="cs-section">
+                    <h4>🏗️ Security &amp; Ledger Architecture</h4>
                     <div class="arch-diagram">
-                        <div class="arch-step">TMDB API</div>
+                        <div class="arch-step">Next.js 14 Client</div>
                         <div class="arch-arrow">→</div>
-                        <div class="arch-step">Data Pipeline<br /><small>Pandas + preprocessing</small></div>
+                        <div class="arch-step">Node / Express API</div>
                         <div class="arch-arrow">→</div>
-                        <div class="arch-step">SVD Model<br /><small>Scikit-learn</small></div>
+                        <div class="arch-step">Groq SDK (Llama 3)</div>
                         <div class="arch-arrow">→</div>
-                        <div class="arch-step">React UI<br /><small>Results + Vibe Score</small></div>
+                        <div class="arch-step">Supabase RLS &amp; Triggers<br /><small>auth.uid() = user_id</small></div>
                     </div>
                 </div>
                 <div class="cs-section">
-                    <h4>⚡ Challenges</h4>
-                    <p>Cold start problem for new users (no history). Solved with a quick onboarding genre quiz to seed
-                        the preference vector before collaborative filtering kicks in.</p>
+                    <h4>🔒 Tenant Data Isolation</h4>
+                    <p>Enforced strict multi-tenant isolation at the database layer with Supabase Row Level Security (RLS) policies (`auth.uid() = user_id`) and automated PL/pgSQL triggers for profile generation and streak ledgers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AVERT Case Study -->
+    <div id="case-study-avert" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeCaseStudy()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCaseStudy()">✕</button>
+            <div class="modal-header">
+                <div class="modal-icon">⚡</div>
+                <h3>AVERT — Intelligent Cattle Collision Prevention System — Case Study</h3>
+            </div>
+            <div class="modal-body">
+                <div class="cs-section">
+                    <h4>🔍 The Problem</h4>
+                    <p>Stray cattle on high-speed unlit highways pose severe collision hazards. Traditional computer vision software suffers high latency and fails to trigger physical warnings fast enough when bound to heavy web render loops.</p>
                 </div>
                 <div class="cs-section">
-                    <h4>📈 Outcome</h4>
-                    <p>Recommendation click-through rate 3× higher vs random baseline. Added YouTube sentiment analysis
-                        on trailers to generate a "Vibe Score" — a differentiator no other student project in this space
-                        had.</p>
+                    <h4>🧠 Computer Vision &amp; ONNX Edge Export</h4>
+                    <p>Fine-tuned a single-class <strong>YOLOv8 Small</strong> model on a cleansed highway dataset (achieving 86.2% mAP@0.5, 91% peak recall, and 0.82 Max F1-score). PyTorch weights were exported to ONNX format to maximize edge inference FPS.</p>
+                </div>
+                <div class="cs-section">
+                    <h4>🏗️ Decoupled AI-oT &amp; Async Telemetry Architecture</h4>
+                    <div class="arch-diagram">
+                        <div class="arch-step">Camera Feed<br /><small>OpenCV Stream</small></div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">ONNX Runtime<br /><small>YOLOv8 Edge Model</small></div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">Async WebSocket<br /><small>asyncio JSON Telemetry</small></div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-step">ESP32 / Streamlit<br /><small>LED Warnings &amp; Dashboard</small></div>
+                    </div>
+                </div>
+                <div class="cs-section">
+                    <h4>⚡ Zero-Latency Hardware Trigger</h4>
+                    <p>Built a full-duplex WebSocket network using Python `asyncio`. The central Python server pushes JSON alerts directly to ESP32 microcontrollers for instant physical roadside LED warnings, operating independent of the Streamlit dashboard.</p>
                 </div>
             </div>
         </div>
@@ -739,52 +796,54 @@
                     </div>
                     <div class="skill-list">
                         <div class="skill-item"><span class="skill-icon">🐍</span>Python</div>
-                        <div class="skill-item"><span class="skill-icon">⚡</span>C++</div>
-                        <div class="skill-item"><span class="skill-icon">☕</span>Java</div>
                         <div class="skill-item"><span class="skill-icon">🟨</span>JavaScript</div>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <div class="skill-group-label">
-                        <span class="sg-icon">🎨</span> Frontend
-                    </div>
-                    <div class="skill-list">
-                        <div class="skill-item"><span class="skill-icon">⚛️</span>React</div>
-                        <div class="skill-item"><span class="skill-icon">🌐</span>HTML/CSS</div>
-                        <div class="skill-item"><span class="skill-icon">💨</span>Tailwind</div>
-                        <div class="skill-item"><span class="skill-icon">🎭</span>Figma</div>
-                    </div>
-                </div>
-                <div class="skill-group">
-                    <div class="skill-group-label">
-                        <span class="sg-icon">⚙️</span> Backend
-                    </div>
-                    <div class="skill-list">
-                        <div class="skill-item"><span class="skill-icon">🟢</span>Node.js</div>
-                        <div class="skill-item"><span class="skill-icon">🚂</span>Express</div>
-                        <div class="skill-item"><span class="skill-icon">🔗</span>REST APIs</div>
+                        <div class="skill-item"><span class="skill-icon">☕</span>Java</div>
+                        <div class="skill-item"><span class="skill-icon">⚡</span>C++</div>
                         <div class="skill-item"><span class="skill-icon">🗄️</span>SQL</div>
                     </div>
                 </div>
                 <div class="skill-group">
                     <div class="skill-group-label">
-                        <span class="sg-icon">🤖</span> AI / ML
+                        <span class="sg-icon">🤖</span> AI &amp; Machine Learning
                     </div>
                     <div class="skill-list">
-                        <div class="skill-item"><span class="skill-icon">🔬</span>Scikit-learn</div>
-                        <div class="skill-item"><span class="skill-icon">🧠</span>TensorFlow</div>
-                        <div class="skill-item"><span class="skill-icon">🎬</span>Recommender Systems</div>
-                        <div class="skill-item"><span class="skill-icon">📊</span>Pandas / NumPy</div>
+                        <div class="skill-item"><span class="skill-icon">🔬</span>scikit-learn</div>
+                        <div class="skill-item"><span class="skill-icon">📊</span>NumPy / Pandas</div>
+                        <div class="skill-item"><span class="skill-icon">⚡</span>Groq SDK (Llama 3)</div>
+                        <div class="skill-item"><span class="skill-icon">👁️</span>YOLOv8 &amp; ONNX</div>
+                        <div class="skill-item"><span class="skill-icon">🧠</span>RAG &amp; Local Embeddings</div>
                     </div>
                 </div>
                 <div class="skill-group">
                     <div class="skill-group-label">
-                        <span class="sg-icon">🛠️</span> Tools
+                        <span class="sg-icon">⚙️</span> Web &amp; Backend
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item"><span class="skill-icon">⚛️</span>Next.js 14 / React</div>
+                        <div class="skill-item"><span class="skill-icon">🟢</span>Node.js / Express</div>
+                        <div class="skill-item"><span class="skill-icon">⚡</span>FastAPI / Flask</div>
+                        <div class="skill-item"><span class="skill-icon">🔗</span>REST APIs &amp; WebSockets</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-label">
+                        <span class="sg-icon">🗄️</span> Databases &amp; Security
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item"><span class="skill-icon">⚡</span>Supabase (Auth &amp; RLS)</div>
+                        <div class="skill-item"><span class="skill-icon">🐘</span>PostgreSQL / PL/pgSQL</div>
+                        <div class="skill-item"><span class="skill-icon">🐬</span>MySQL / SQLite</div>
+                        <div class="skill-item"><span class="skill-icon">🔍</span>Vector Databases</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-group-label">
+                        <span class="sg-icon">🛠️</span> Tools &amp; Ecosystem
                     </div>
                     <div class="skill-list">
                         <div class="skill-item"><span class="skill-icon">🐙</span>Git / GitHub</div>
                         <div class="skill-item"><span class="skill-icon">🐳</span>Docker</div>
-                        <div class="skill-item"><span class="skill-icon">💻</span>VS Code</div>
+                        <div class="skill-item"><span class="skill-icon">💻</span>VS Code / ESP32</div>
                         <div class="skill-item"><span class="skill-icon">☁️</span>Vercel / GitHub Pages</div>
                     </div>
                 </div>
@@ -792,50 +851,46 @@
         </div>
     </section>
 
-    <!-- ===== EXPERIENCE / ACHIEVEMENTS ===== -->
+    <!-- ===== EDUCATION & EXPERIENCE ===== -->
     <section id="experience">
         <div class="container">
-            <div class="section-label">04 / Experience</div>
-            <h2 class="section-title">What I've <span class="gradient-text">done.</span></h2>
+            <div class="section-label">04 / Education &amp; Experience</div>
+            <h2 class="section-title">Education &amp; <span class="gradient-text">Journey.</span></h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="tl-date">2025 — Present</div>
-                        <div class="tl-title">CS Engineering Student</div>
-                        <div class="tl-org">University · B.Tech Computer Science</div>
-                        <p class="tl-desc">Studying core CS: Data Structures, OS, Networking, Algorithms, ML. Building
-                            side projects in between assignments.</p>
+                        <div class="tl-date">2022</div>
+                        <div class="tl-title">Higher Secondary Certificate (12th Grade)</div>
+                        <div class="tl-org">Delhi Public School (DPS), Durgapur, West Bengal, India</div>
+                        <p class="tl-desc">Science stream with Computer Science &amp; Mathematics. <strong>Score: 83.33%</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot achievement"></div>
+                    <div class="timeline-content">
+                        <div class="tl-date">2023 — 2027</div>
+                        <div class="tl-title">B.Tech in Computer Science &amp; Engineering (3rd Year)</div>
+                        <div class="tl-org">Bhilai Institute of Technology (BIT), Durg, Chhattisgarh, India</div>
+                        <p class="tl-desc">Core CS focus: AI/ML Systems, RAG Pipelines, Multi-agent orchestration, Event-driven architecture. <strong>CGPA: 7.63/10</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot achievement"></div>
+                    <div class="timeline-content">
+                        <div class="tl-date">2024</div>
+                        <div class="tl-title">🎬 Advanced Movie Recommendation System Shipped</div>
+                        <div class="tl-org">Full-Stack AI Project</div>
+                        <p class="tl-desc">Architected FastAPI backend + 13-page React UI combining 60/40 collaborative/content similarity with in-memory caching and AI assistant.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot achievement"></div>
                     <div class="timeline-content">
                         <div class="tl-date">2025</div>
-                        <div class="tl-title">🏆 Hackathon — UI Track Finalist</div>
-                        <div class="tl-org">24-hour Build Sprint</div>
-                        <p class="tl-desc">Built a full design system + working prototype under 24 hours. Reached finals
-                            for best UI/UX execution.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot achievement"></div>
-                    <div class="timeline-content">
-                        <div class="tl-date">2024</div>
-                        <div class="tl-title">🎬 ML Movie Recommender — Shipped</div>
-                        <div class="tl-org">Personal Project</div>
-                        <p class="tl-desc">Designed, trained, and deployed a hybrid recommendation engine. Got 3× better
-                            click-through than random baseline.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="tl-date">2024</div>
-                        <div class="tl-title">Technical Events & Community</div>
-                        <div class="tl-org">College CS Club</div>
-                        <p class="tl-desc">Participated in competitive coding events, technical seminars, and peer code
-                            reviews.</p>
+                        <div class="tl-title">⚡ AVERT — Intelligent Cattle Collision Prevention Shipped</div>
+                        <div class="tl-org">Hardware / Edge AI-oT Project</div>
+                        <p class="tl-desc">Fine-tuned YOLOv8 Small (86.2% mAP@0.5), exported PyTorch to ONNX, built full-duplex asyncio WebSockets pushing JSON to ESP32 microcontrollers.</p>
                     </div>
                 </div>
             </div>

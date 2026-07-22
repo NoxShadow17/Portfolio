@@ -2030,6 +2030,22 @@ footer {
   border: 1px solid var(--border);
 }
 
+/* AVERT hardware telemetry mockup */
+.fp-mockup-avert {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.04), var(--bg3));
+}
+
+.mock-avert-status {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  padding: 8px 12px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 6px;
+  color: var(--red);
+  line-height: 1.5;
+}
+
 /* CV mockup landmark dots */
 .mock-cv-view {
   position: relative;
